@@ -1,4 +1,13 @@
-<hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
 </p>
+
+<div class="container-fluid">
+    <wj-tree-view [itemsSource]="data" [displayMemberPath]="'header'" [childItemsPath]="'items'"
+        (contextmenu)="showContextMenu($event)">
+    </wj-tree-view>
+    <wj-menu #theMenu (itemClicked)="menuItemClick(theMenu)" style="display: none" 
+    [openOnHover] = "true" [closeOnLeave] = "true" [itemsSource]="contextMenus" [displayMemberPath]="'label'" [subItemsPath] = "'items'">
+       
+    </wj-menu>
+</div>
