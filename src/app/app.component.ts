@@ -19,6 +19,7 @@ export class AppComponent  {
     showContextMenu(e: any) {
         e.preventDefault();
         setTimeout(() => {
+          this.theMenu.hide();
             this.contextMenus = [{label: 'L1', value: 'L11', items: [
                 {label: 'L11', value: 'L11'},
                 {label: 'L12', value: 'L12'},
